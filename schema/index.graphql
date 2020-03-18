@@ -1,0 +1,3 @@
+#import Usuario, Query, Mutation, UsuarioNovo, UsuarioAlterar, UsuarioFiltro from 'usuarios.graphql'
+
+scalar Date

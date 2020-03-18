@@ -1,0 +1,59 @@
+scalar Date
+
+type Query {
+    usuarios: [Usuario]
+    usuario(filtro: UsuarioFiltro!): Usuario
+    login(dados: UsuarioLogin!): Usuario
+}
+
+type Mutation {
+    novoUsuario(dados: UsuarioNovo): Usuario!
+    alterarUsuario(
+        dados: UsuarioAlterar!
+        filtro: UsuarioFiltro!): Usuario
+    excluirUsuario(filtro: UsuarioFiltro!): Usuario
+}
+
+type Usuario {
+    id: Int
+    token: String
+    nome: String
+    email: String!
+    senha: String!
+    criadoEm: Date
+    
+}
+
+input UsuarioFiltro {
+    id: Int
+    email: String
+}
+
+input UsuarioLogin {
+    id: Int
+    token: String
+    nome: String
+    email: String!
+    senha: String!
+    criadoEm: Date
+    
+}
+
+input UsuarioNovo {
+    id: Int
+    token: String
+    nome: String
+    email: String!
+    senha: String!
+    criadoEm: Date
+    
+}
+
+input UsuarioAlterar {
+    id: Int    
+    nome: String
+    email: String
+    senha: String
+    criadoEm: Date
+    
+}
