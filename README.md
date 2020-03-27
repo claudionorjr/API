@@ -29,4 +29,4 @@ APP_AUTH_SECRET=precisa gerar uma secret key
 
 3) executar a migration
 
-4) e usar com npm install
+4) e usar com npm start
